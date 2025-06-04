@@ -9,6 +9,7 @@ import com.google.gson.Gson
 import com.taloscore.guessapp.GameInfo
 import com.taloscore.guessapp.Topic
 import com.taloscore.guessapp.data.model.ApiState
+import com.taloscore.guessapp.data.model.GameEvent
 import com.taloscore.guessapp.data.repository.CategoryRepository
 import com.taloscore.guessapp.ui.screen.AppScreen
 import com.taloscore.guessapp.utils.Constant
@@ -131,23 +132,23 @@ class WebsocketViewModel @Inject constructor(private val categoryRepository: Cat
                 topic = gameInfo.topicId,
                 token = token
             )
-            socket.emit("joined", Gson().toJson(newUser))
+            socket.emit(GameEvent.JOINED, Gson().toJson(newUser))
         }
 
-        socket.on("guest added") { args ->
+        socket.on(GameEvent.GUEST_ADDED) { args ->
             Log.d(TAG, "Data: ${args[0]}")
             viewModelScope.launch {
                 navHostController.navigate(AppScreen.PlayGroundScreen.route)
             }
         }
 
-        socket.on("question") { args ->
+        socket.on(GameEvent.NEW_QUESTION) { args ->
             Log.d(TAG, "Question: ${args[0]}")
             val response = Gson().fromJson(args[0].toString(), Question::class.java)
             _question.value = response
         }
 
-        socket.on("end") { args ->
+        socket.on(GameEvent.GAME_ENDED) { args ->
             Log.d(TAG, "Game Ends: ${args[0]}")
             val result = Result(
                 topic_id = if (gameInfo.topicId == "") _topic.value else gameInfo.topicId,
@@ -187,8 +188,8 @@ class WebsocketViewModel @Inject constructor(private val categoryRepository: Cat
             topic = gameInfo.topicId,
             token = token
         )
-        socket.emit("start game", Gson().toJson(newUser))
-        socket.emit("add guest", Gson().toJson(newUser))
+        socket.emit(GameEvent.START_GAME, Gson().toJson(newUser))
+        socket.emit(GameEvent.ADD_GUEST, Gson().toJson(newUser))
     }
 
     fun listParticipants(token: String, gameCode: String) {
@@ -201,7 +202,7 @@ class WebsocketViewModel @Inject constructor(private val categoryRepository: Cat
     }
 
     fun disconnectUser(name: String, gameCode: String){
-        socket.emit("leave", Gson().toJson(EndData(name, gameCode)))
+        socket.emit(GameEvent.LEAVE_SESSION, Gson().toJson(EndData(name, gameCode)))
         socket.disconnect()
     }
 
