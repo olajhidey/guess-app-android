@@ -77,8 +77,9 @@ fun DashboardScreen(
                     IconButton(onClick = {
                         scope.launch {
                             TokenManager.writeToken(context, "")
+                            navHostController.navigate(AppScreen.AuthScreen.route)
                         }
-                        navHostController.navigate(AppScreen.AuthScreen.route)
+
                     }) {
                         Icon(
                             painterResource(R.drawable.outline_logout_24),
