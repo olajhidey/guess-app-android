@@ -95,6 +95,7 @@ fun LoginContent(
                 scope.launch {
                     TokenManager.writeToken(context, success.token)
                     TokenManager.writeToPreference(context, Constant.USERNAME_KEY, usernameText)
+                    navHostController.currentBackStackEntry?.savedStateHandle?.set("token", success.token)
                     navHostController.navigate(AppScreen.DashboardScreen.route)
                 }
             }

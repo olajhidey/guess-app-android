@@ -6,9 +6,6 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.taloscore.guessapp.FinishedScreen
-import com.taloscore.guessapp.LobbyScreen
-import com.taloscore.guessapp.PlayGroundScreen
 
 import com.taloscore.guessapp.viewmodel.AuthViewModel
 import com.taloscore.guessapp.viewmodel.WebsocketViewModel

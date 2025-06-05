@@ -8,7 +8,7 @@ Quiz Arena is a real-time multiplayer quiz game where users can create or join g
 
 Guess App relies on two key backend and admin tools to deliver its functionality:
 
-### 🌐 [Guess-App-Web (Host Engine)]()
+### 🌐 [Guess-App-Web (Host Engine)](https://github.com/olajhidey/guess-app-web)
 - A web-based host engine responsible for managing game sessions, player connections, and real-time communication using **Socket.IO**.
 - Hosts the game logic and synchronizes state across mobile players in real-time.
 - Handles game code generation, player joining, and broadcasting questions and results.
@@ -64,7 +64,7 @@ Guess App relies on two key backend and admin tools to deliver its functionality
    ```
 
 ## 🧭 App Flow
-1. Create/Register User. This calls the [Guess Admin Backend API]() 
+1. Create/Register User. This calls the [Guess Admin Backend API](https://github.com/olajhidey/guess-admin) 
 2. Login in the newly created User 
 3. ### Create Game Screen
    - Select a category and topic. 

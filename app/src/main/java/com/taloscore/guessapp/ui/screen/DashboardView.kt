@@ -115,7 +115,9 @@ fun DashboardContent(
     var gameCode by remember { mutableStateOf("") }
 
     LaunchedEffect(token) {
-        token?.let { gameViewModel.categoryList(it) }
+        if (token != null && token != ""){
+            token.let { gameViewModel.categoryList(it) }
+        }
     }
 
     LaunchedEffect(categoryList) {

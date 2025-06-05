@@ -5,7 +5,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-const val BASE_URL = "https://zr54q3zh-8080.uks1.devtunnels.ms/"
+const val BASE_URL = "https://guess-admin.onrender.com/"
 object RetrofitInstance {
     private val okHttpClient = OkHttpClient.Builder()
         .addInterceptor(HttpLoggingInterceptor().apply {
