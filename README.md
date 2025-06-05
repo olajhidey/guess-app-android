@@ -1,6 +1,6 @@
 # Guess App Mobile (Android)(WIP)
 
-This is the companion Android application for [Guess Web]() and [Guess Admin]().
+This is the companion Android application for [Guess Web](https://github.com/olajhidey/guess-app-web) and [Guess Admin](https://github.com/olajhidey/guess-admin).
 Quiz Arena is a real-time multiplayer quiz game where users can create or join game rooms, answer questions with images, and compete with others live. Built using **Jetpack Compose**, this app delivers an engaging, modern UI and interactive gameplay experience.
 
 ---
