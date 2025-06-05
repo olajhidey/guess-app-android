@@ -3,6 +3,26 @@
 This is the companion Android application for [Guess Web]() and [Guess Admin]().
 Quiz Arena is a real-time multiplayer quiz game where users can create or join game rooms, answer questions with images, and compete with others live. Built using **Jetpack Compose**, this app delivers an engaging, modern UI and interactive gameplay experience.
 
+---
+## 🔗 Companion Applications
+
+Guess App relies on two key backend and admin tools to deliver its functionality:
+
+### 🌐 [Guess-App-Web (Host Engine)]()
+- A web-based host engine responsible for managing game sessions, player connections, and real-time communication using **Socket.IO**.
+- Hosts the game logic and synchronizes state across mobile players in real-time.
+- Handles game code generation, player joining, and broadcasting questions and results.
+
+### 🛠️ [Guess-App-Admin (Admin Portal)](https://github.com/olajhidey/guess-admin)
+- A web-based administrative dashboard where authenticated users can:
+   - ✅ Create and manage **categories**, **topics**, and **questions**.
+   - 📊 Review **game summaries**, including scores, participation, and question analytics.
+   - 🧠 Upload question images and define correct answers.
+- Enables dynamic quiz content management without modifying the mobile app.
+
+> 🚨 **Note**: These two companion apps must be set up and running for the mobile app to function properly.
+
+---
 
 ## 🧩 Features
 
