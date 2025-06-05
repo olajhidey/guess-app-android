@@ -61,10 +61,10 @@ Quiz Arena is a real-time multiplayer quiz game where users can create or join g
    - Countdown timer for each question.
 
 ## 📸 Screenshots
-![Register](screenshots/1.png)
-![Login](screenshots/2.png)
-![Dashboard](screenshots/3.png)
-![Start Game](screenshots/4.png)
-![Lobby](screenshots/5.png)
-![Playground](screenshots/6.png)
-![Game Summary](screenshots/8.png)
+<img src="screenshots/1.png" alt="Login" width="200" height="300" />
+<img src="screenshots/2.png" alt="Register" width="200" height="300" />
+<img src="screenshots/3.png" alt="Dashboard" width="200" height="300" />
+<img src="screenshots/4.png" alt="Start game" width="200" height="300" />
+<img src="screenshots/5.png" alt="Lobby" width="200" height="300" />
+<img src="screenshots/6.png" alt="Playground" width="200" height="300" />
+<img src="screenshots/8.png" alt="Game Summary" width="200" height="300" />
